@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Lancelot&family=Lato&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, section, p, pre, code, samp, kbd, var, input, select, textarea, button, a, span, label {
+  line-height: 1.47;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Lancelot', serif;
+}
+
+pre, code, samp, kbd, var {
+  font-family: 'Fira Code', monospace;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}

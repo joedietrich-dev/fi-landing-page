@@ -4,9 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css" />
+  <link rel="stylesheet" href="./style.css" />
   <title>Joe Dietrich</title>
 </head>
 <body>
-  <h1>Joe Dietrich</h1>
+  <main>
+    <h1>Joe Dietrich</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores rerum libero quae, recusandae non, hic, iusto consequuntur voluptatem tenetur minus suscipit accusantium perferendis fugit quam. Commodi repellendus nisi eum aliquam!</p>
+    <pre>
+      function solutionRefactor(roman){
+        const values = {
+          'M': 1000,
+          'D': 500,
+          'C': 100,
+          'L': 50,
+          'X': 10,
+          'V': 5,
+          'I': 1,
+        }
+        let total = 0;
+        for (let i = 0; i < roman.length; i++) {
+          // If this letter's value is less than the next letter's, we subtract it
+          const curr = values[roman[i]];
+          const next = values[roman[i + 1]];
+          total += (curr < next) ? -curr : curr;
+        }
+        return total;
+      }
+    </pre>
+    <h2>Lorem, ipsum dolor</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dignissimos iusto necessitatibus inventore earum, nostrum, voluptatum unde quisquam consectetur quam nesciunt officia ut reiciendis accusantium harum eius modi optio sit.</p>
+    <h3>Lorem, ipsum</h3>
+    <p>Repudiandae laborum quisquam necessitatibus minima quam quas ducimus voluptas eligendi reiciendis facilis corporis, cupiditate quia autem similique facere numquam quibusdam molestias excepturi voluptatem ipsa error assumenda. Aliquam excepturi aliquid commodi!</p>
+    <p>Assumenda molestias tempora omnis soluta, perferendis eveniet, voluptatibus officia illum a minus laborum cumque quod, expedita quae repudiandae corporis architecto similique veritatis neque quibusdam cum ea distinctio. Laudantium, iusto ab!</p>
+  </main>
 </body>
 </html>
