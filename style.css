@@ -1,22 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Lancelot&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Merriweather+Sans:wght@300&display=swap');
+
+:root {
+  --header-font: 'Catamaran', serif;
+  --body-font: 'Merriweather Sans', sans-serif;
+  --code-font: 'Fira Code', monospace;
+}
 
 body, h1, h2, h3, h4, h5, h6, section, p, pre, code, samp, kbd, var, input, select, textarea, button, a, span, label {
   line-height: 1.47;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body{
-  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-family: var(--body-font);
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Lancelot', serif;
+  font-family: var(--header-font);
+  letter-spacing: -1px;
+}
+
+section, p, input, select, textarea, button, a, span, label {
+  font-family: var(--body-font);
+  font-weight: 300;
 }
 
 pre, code, samp, kbd, var {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--code-font);
+}
+pre {
+  overflow-x: scroll;
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: auto;
+}
+@media screen and (min-width: 400px)  { 
+  main {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 600px)  {
+  main {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 1000px) {  
+  main {
+    width: 800px;
+  }
 }
