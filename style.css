@@ -56,6 +56,38 @@ main {
   width: 90%;
   margin: auto;
 }
+.card-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: auto;
+  gap: 3rem;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: flex;
+  flex-direction: column;
+}
+.card > a {
+  display: block;
+  line-height: 0;
+}
+.card:hover {
+  left: .5%;
+  top: .5%;
+  position: relative;
+}
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+.card-title {
+  padding: 1.5rem;
+  text-align: center;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./img/triangle-background.svg);
+  color: white;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 400px)  { 
   main {
     width: 370px;
