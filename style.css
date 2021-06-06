@@ -36,7 +36,9 @@ p.logo {
   font-weight: 600;
   margin-block: 0;
 }
-
+a {
+  text-decoration: none;
+}
 pre, code, samp, kbd, var {
   font-family: var(--code-font);
 }
@@ -66,26 +68,36 @@ main {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  transition: all 25ms;
+  top: 0;
+  left: 0;
 }
 .card > a {
   display: block;
   line-height: 0;
 }
 .card:hover {
-  left: .5%;
-  top: .5%;
-  position: relative;
+  left: .25rem;
+  top: .25rem;
+  transition: all 25ms;
 }
 .card-image {
   max-width: 100%;
   height: auto;
 }
 .card-title {
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./img/triangle-background.svg);
+  background-size: cover;
+}
+.card-title > a {
   color: white;
-  font-weight: 700;
+  font-weight: 600;
+}
+.card-title > a:visited {
+  color: hsla(10, 100%, 100%, 1);
 }
 
 @media screen and (min-width: 400px)  { 
