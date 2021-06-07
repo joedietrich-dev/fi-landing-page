@@ -4,6 +4,23 @@
   --header-font: 'Catamaran', serif;
   --body-font: 'Merriweather Sans', sans-serif;
   --code-font: 'Fira Code', monospace;
+  
+  --main-color: hsl(0, 0%, 99%);
+  --accent-color: hsl(0, 0%, 11%);
+}
+
+.dark {
+  --main-color: hsl(0, 0%, 11%);
+  --accent-color: hsl(0, 0%, 99%);
+}
+.light {
+  --main-color: hsl(0, 0%, 99%);
+  --accent-color: hsl(0, 0%, 11%);
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--accent-color);
 }
 
 body, h1, h2, h3, h4, h5, h6, section, p, pre, code, samp, kbd, var, input, select, textarea, button, a, span, label {
@@ -29,13 +46,6 @@ section, p, input, select, textarea, button, a, span, label {
   font-family: var(--body-font);
   font-weight: 300;
 }
-p.logo {
-  font-size: 3rem;
-  font-family: var(--header-font);
-  letter-spacing: -1px;
-  font-weight: 600;
-  margin-block: 0;
-}
 a {
   text-decoration: none;
 }
@@ -46,13 +56,26 @@ pre {
   overflow-x: scroll;
 }
 header {
-  background-image: linear-gradient(45deg, black, transparent), url(./img/triangle-background.svg);
+  background-image: linear-gradient(45deg, var(--accent-color), transparent), url(./img/triangle-background.svg);
   background-size: cover;
   width: 100%;
   height: 100%;
   padding: 2rem;
-  color: white;
+  color: var(--main-color);
   box-sizing:border-box;
+  display: flex;
+  justify-content: space-between;
+}
+button#theme-switch {
+  background-color: var(--main-color);
+  color: var(--accent-color);
+}
+p.logo {
+  font-size: 3rem;
+  font-family: var(--header-font);
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin-block: 0;
 }
 main {
   width: 90%;
@@ -78,6 +101,7 @@ main {
   line-height: 0;
 }
 .card:hover {
+  box-shadow: rgb(0, 0, 0, 16%) 0px 0px .5rem 0px;
   left: .25rem;
   top: .25rem;
   transition: all 25ms;
@@ -97,7 +121,24 @@ main {
   font-weight: 600;
 }
 .card-title > a:visited {
-  color: hsla(10, 100%, 100%, 1);
+  color: white;
+}
+.contact-links{
+  width:100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.contact-link{
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15%;
+}
+.contact-link + .contact-link {
+  margin-left: 2rem;
 }
 
 @media screen and (min-width: 400px)  { 
