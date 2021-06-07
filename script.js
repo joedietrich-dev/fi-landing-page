@@ -1,14 +1,7 @@
-const h2 = document.createElement('h2');
-h2.textContent = "This content added by JavaScript"; 
-document.querySelector('main').appendChild(h2); 
-
-function themeStore(value) {
-  
-}
-
 function main() {
   const body = document.querySelector('body');
   const themeToggler = document.getElementById('theme-switch');
+  
   if (!localStorage.getItem('theme')) {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       body.classList.add('dark');
