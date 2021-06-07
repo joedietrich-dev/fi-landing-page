@@ -15,13 +15,6 @@
 </header>
 <body>
   <main>
-    <!--TO DO:
-        1. Break Projects into separate page
-        2. Create separate page for Array functions article
-        3. Write copy for links to Projects and Arrays
-        4. Refactor CSS to allow for a Dark Theme
-        5. Create button that switches themes and persists selection in localStorage
-        6. Create favicon-->
     <h1>Welcome!</h1>
     <p>Hello! I'm Joe - a product manager and a life-long lover of learning. I'm passionate about solving 
       problems, technology, and experimentation. Sometimes I even combine all three!</p>
@@ -84,33 +77,6 @@
       <li class="contact-link"><a href="https://www.linkedin.com/in/joe-dietrich-17b74062/"><img src="./img/linkedin.svg" alt="Link to LinkedIn" width="50" height="50"></a></li>
       <li class="contact-link"><a href="https://joedietrich.dev"><img src="./img/link.svg" alt="Link to joedietrich.dev"  width="50" height="50"></a></li>
     </ul>
-
-    <pre>
-      function solutionRefactor(roman){
-        const values = {
-          'M': 1000,
-          'D': 500,
-          'C': 100,
-          'L': 50,
-          'X': 10,
-          'V': 5,
-          'I': 1,
-        }
-        let total = 0;
-        for (let i = 0; i < roman.length; i++) {
-          // If this letter's value is less than the next letter's, we subtract it
-          const curr = values[roman[i]];
-          const next = values[roman[i + 1]];
-          total += (curr < next) ? -curr : curr;
-        }
-        return total;
-      }
-    </pre>
-    <h2>Lorem, ipsum dolor</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dignissimos iusto necessitatibus inventore earum, nostrum, voluptatum unde quisquam consectetur quam nesciunt officia ut reiciendis accusantium harum eius modi optio sit.</p>
-    <h3>Lorem, ipsum</h3>
-    <p>Repudiandae laborum quisquam necessitatibus minima quam quas ducimus voluptas eligendi reiciendis facilis corporis, cupiditate quia autem similique facere numquam quibusdam molestias excepturi voluptatem ipsa error assumenda. Aliquam excepturi aliquid commodi!</p>
-    <p>Assumenda molestias tempora omnis soluta, perferendis eveniet, voluptatibus officia illum a minus laborum cumque quod, expedita quae repudiandae corporis architecto similique veritatis neque quibusdam cum ea distinctio. Laudantium, iusto ab!</p>
   </main>
   <script src="./script.js"></script>
 </body>
